@@ -1,0 +1,21 @@
+apply plugin: 'application'
+
+mainClassName = 'com.realdolmen.Main'
+
+archivesBaseName="Hello"
+
+repositories {
+  mavenCentral()
+}
+
+run.args=[project.naam1, project.naam2]
+
+dependencies {
+  testCompile 'junit:junit:4.12'
+}
+
+task helloworld {
+  doLast {
+    println "Hello, world!"
+  }
+}
